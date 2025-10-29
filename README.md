@@ -12,3 +12,5 @@
 # notes to self: 
 
 - (10/29/2025) When I was working on the main header card of the website, I was trying to make a caption on top of the image similar to the desktop example image, but I was having trouble overlaying the text on top of the image with position: absolute, but I saw that in order to contain the position where it moves with the image itself, I needed to define a "position context" which provides html elements that are position: absolute to move relative to a parent element that isn't position: static, so I made the image container position: relative to contain the position: absolute caption. I also need to remind myself that position: absolute is relative to the parent that isn't static, and position: fixed is relative to the viewport.
+
+- (10/29/2025) the main section is finished, but the box shadows are a little off on the cards. It should be fine for now.
