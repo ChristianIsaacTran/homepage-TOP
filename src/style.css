@@ -31,7 +31,17 @@ li {
     margin: 0;
 }
 
-p {
-    /* color: red; */
+body {
     font-family: "ubuntuFont";
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+header {
+    display: flex;
+}
+
+.header-image {
+    max-width: 500px;
 }
