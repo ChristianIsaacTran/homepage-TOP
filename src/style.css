@@ -31,6 +31,7 @@ h6,
 ul,
 ol,
 li,
+p,
 button {
     padding: 0;
     margin: 0;
@@ -80,7 +81,7 @@ header {
     padding: 30px;
 }
 
-.social-button-group {
+.header-social-button-group {
     display: flex;
     justify-content: end;
     gap: 20px;
@@ -92,4 +93,100 @@ header {
     min-width: 60px;
     background: none;
     border: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-title {
+    font-size: 3rem;
+}
+
+.main-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 100px 60px;
+}
+
+.card {
+    box-shadow: 2px 7px 12px 2px rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    max-width: 530px
+}
+
+.card-screenshot-container-red,
+.card-screenshot-container-purple,
+.card-screenshot-container-green,
+.card-screenshot-container-pink, 
+.card-screenshot-container-orange, 
+.card-screenshot-container-blue {
+    padding: 90px 100px;
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+}
+
+.card-screenshot-container-red {
+    background-color: red;
+}
+
+.card-screenshot-container-purple {
+    background-color: rgba(128, 0, 128, 0.507);
+}
+
+.card-screenshot-container-green {
+    background-color: rgba(0, 128, 0, 0.726);
+}
+
+.card-screenshot-container-pink {
+    background-color: rgb(255, 0, 212);
+}
+
+.card-screenshot-container-orange {
+    background-color: rgb(255, 72, 0);
+}
+
+.card-screenshot-container-blue {
+    background-color: rgba(0, 110, 255, 0.651);
+}
+
+
+.card-screenshot{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.card-text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-text-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-social-button-group {
+    display: flex; 
+    gap: 30px;
+}
+
+.card-github-button, .card-open-button {
+    min-width: 50px;
+    background: none;
+    border: none;
+}
+
+.card-description {
+    color: rgb(66, 66, 66);
+    padding-bottom: 80px;
 }
