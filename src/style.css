@@ -116,17 +116,17 @@ main {
     box-shadow: 2px 7px 12px 2px rgba(0, 0, 0, 0.425);
     display: flex;
     flex-direction: column;
-    max-width: 530px
+    max-width: 530px;
 }
 
 .card-screenshot-container-red,
 .card-screenshot-container-purple,
 .card-screenshot-container-green,
-.card-screenshot-container-pink, 
-.card-screenshot-container-orange, 
+.card-screenshot-container-pink,
+.card-screenshot-container-orange,
 .card-screenshot-container-blue {
     padding: 90px 100px;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-content: center;
 }
@@ -155,8 +155,7 @@ main {
     background-color: rgba(0, 110, 255, 0.651);
 }
 
-
-.card-screenshot{
+.card-screenshot {
     color: white;
     font-size: 3rem;
     text-align: center;
@@ -176,11 +175,12 @@ main {
 }
 
 .card-social-button-group {
-    display: flex; 
+    display: flex;
     gap: 30px;
 }
 
-.card-github-button, .card-open-button {
+.card-github-button,
+.card-open-button {
     min-width: 50px;
     background: none;
     border: none;
@@ -189,4 +189,12 @@ main {
 .card-description {
     color: rgb(66, 66, 66);
     padding-bottom: 80px;
+}
+
+footer {
+    display: flex;
+}
+
+.footer-image {
+    max-width: 400px;
 }
