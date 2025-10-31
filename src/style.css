@@ -298,16 +298,13 @@ footer {
 }
 
 /* tablet breakpoint */
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
     header,
     main,
     footer {
         max-width: var(--html-section-width-tablet);
     }
 
-    body {
-        max-width: 800px;
-    }
 
     .diagonal-shape {
         transform: rotate(-10deg) translateY(-485px) scaleX(5);
