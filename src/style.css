@@ -40,17 +40,32 @@ button {
     margin: 0;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
     font-family: "ubuntuFont";
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 header {
     display: flex;
     align-items: center;
     margin: 80px;
+    position: relative;
+}
+
+.diagonal-shape {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 5000px;
+    background-color: var(--background-shapes-color);
+    transform: rotate(-15deg) scalex(2) translate(3%, -81%);
+    z-index: -1;
 }
 
 .header-title {
@@ -95,6 +110,7 @@ header {
     min-width: 900px;
     min-height: 500px;
     padding: 30px;
+    background-color: white;
 }
 
 .header-social-button-group {
@@ -271,3 +287,9 @@ main,
 footer {
     max-width: var(--html-section-width);
 }
+
+/* @media(max-width: 600px) { 
+
+}
+
+*/
