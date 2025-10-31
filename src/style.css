@@ -290,8 +290,9 @@ footer {
     max-width: var(--html-section-width);
 }
 
-/* @media(max-width: 600px) { 
-
+@media(max-width: 600px) { 
+    header {
+        margin: 40px;
+    }
 }
 
-*/
