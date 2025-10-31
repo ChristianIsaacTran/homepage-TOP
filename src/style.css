@@ -1,7 +1,8 @@
 :root {
     --header-element-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.301);
     --background-shapes-color: rgb(4, 91, 112);
-    --html-section-width: 1700px;
+    --html-section-width-desktop: 1700px;
+    --html-section-width-tablet: 800px;
 }
 
 *,
@@ -40,9 +41,26 @@ button {
     margin: 0;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     min-width: 100vw;
+}
+
+header,
+main,
+footer {
+    max-width: var(--html-section-width-desktop);
+}
+
+.diagonal-shape {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 1000px;
+    background-color: var(--background-shapes-color);
+    transform: rotate(-10deg) scale(1.2, 2) translateY(-300px);
+    z-index: -1;
+    box-shadow: var(--header-element-box-shadow);
 }
 
 body {
@@ -50,24 +68,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    overflow-x: hidden;
 }
 
 header {
     display: flex;
     align-items: center;
-    margin: 80px;
+    margin: 80px 80px 800px 80px;
     position: relative;
-}
-
-.diagonal-shape {
-    position: absolute;
-    min-width: 100vw;
-    min-height: 5000px;
-    background-color: var(--background-shapes-color);
-    transform: rotate(-15deg) scalex(2) translate(3%, -81%);
-    z-index: -1;
-    box-shadow: var(--header-element-box-shadow);
+    top: 350px;
+    left: 351px;
+    max-width: 800px;
 }
 
 .header-title {
@@ -75,11 +86,14 @@ header {
 }
 
 .header-image-container {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    right: 800px;
+    top: 50%;
+    bottom: 50%;
 }
 
 .header-image {
@@ -91,11 +105,11 @@ header {
     text-align: center;
     color: white;
     position: absolute;
-    bottom: 90px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     min-width: 800px;
     font-size: 3rem;
+    top: 300px;
 }
 
 .header-main-text {
@@ -268,7 +282,7 @@ footer {
 
 .contact-group {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -283,16 +297,27 @@ footer {
     min-width: 1000px;
 }
 
-
-header,
-main,
-footer {
-    max-width: var(--html-section-width);
-}
-
-@media(max-width: 600px) { 
+/* tablet breakpoint */
+/* @media (max-width: 800px) {
     header {
         margin: 40px;
     }
-}
 
+    .header-image {
+        position: relative;
+        display: inline-block;
+        left: 80px;
+        max-height: 600px;
+    }
+
+    .header-text-container {
+        min-height: 500px;
+        min-width: 200px;
+    }
+
+    header,
+    main,
+    footer {
+        max-width: var(--html-section-width-tablet);
+    }
+} */
