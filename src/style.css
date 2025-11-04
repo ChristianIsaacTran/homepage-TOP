@@ -3,6 +3,7 @@
     --background-shapes-color: rgb(4, 91, 112);
     --html-section-width-desktop: 1700px;
     --html-section-width-tablet: 700px;
+    --html-section-width-mobile: 400px;
 }
 
 *,
@@ -298,13 +299,12 @@ footer {
 }
 
 /* tablet breakpoint */
-@media (max-width: 1100px) {
+@media (min-width: 700px) and (max-width: 1100px) {
     header,
     main,
     footer {
         max-width: var(--html-section-width-tablet);
     }
-
 
     .diagonal-shape {
         transform: rotate(-10deg) translateY(-485px) scaleX(5);
@@ -396,5 +396,126 @@ footer {
 
     .footer-social-group > button {
         min-width: 50px;
+    }
+}
+
+/* mobile breakpoint */
+@media (max-width: 500px) {
+    header,
+    main,
+    footer {
+        max-width: var(--html-section-width-tablet);
+    }
+
+    .diagonal-shape {
+        transform: rotate(328deg) translateY(-643px) scaleX(5);
+    }
+
+    header {
+        max-width: 400px;
+        top: 0;
+        margin: 0 0 200px 0;
+        padding: 0;
+        max-height: none;
+        position: static;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-text-container {
+        background: none;
+        box-shadow: none;
+        min-width: 0;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .header-main-text {
+        padding: 0;
+    }
+
+    .header-image-container {
+        position: static;
+        right: 0;
+        top: 0;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 0;
+        align-items: start;
+    }
+
+    .header-image-text {
+        min-width: 0;
+        max-width: none;
+        font-size: 3.5rem;
+        text-align: left;
+        top: 340px;
+        background: none;
+        text-shadow: 0px 6px 10px black;
+    }
+
+    .header-image {
+        max-height: 500px;
+        max-width: 400px;
+    }
+
+    .main-card-container {
+        grid-template-columns: minmax(320px, 1fr);
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .card {
+        max-width: 377px;
+    }
+
+    .card-github-button, .card-open-button {
+        min-width: 40px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .footer-description {
+        font-size: 1.2rem;
+    }
+
+    .footer-text-container {
+        max-width: 377px;
+        font-size: 1rem;
+        gap: 30px;
+    }
+
+    .footer-title {
+        text-align: center;
+    }
+
+    .phone-icon,
+    .email-icon {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .footer-social-group {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .footer-social-group > button {
+        min-width: 60px;
+    }
+
+    .footer-image {
+        max-height: 500px;
+        max-width: 400px;
+        min-width: 0;
     }
 }
