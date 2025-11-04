@@ -126,6 +126,7 @@ header {
 .header-text-container {
     display: flex;
     flex-direction: column;
+    padding: 30px;
     gap: 40px;
     box-shadow: var(--header-element-box-shadow);
     min-width: 900px;
