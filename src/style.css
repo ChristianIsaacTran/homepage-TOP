@@ -307,11 +307,16 @@ footer {
         transform: rotate(-10deg) translateY(-485px) scaleX(5);
     }
 
+    .shape-overflow-container {
+        max-width: var(--html-section-width-tablet);
+        max-height: 1000px;
+        position: relative;
+    }
+
     header {
         top: 0;
         margin-top: 250px;
         margin-bottom: 200px;
-        margin-left: 190px;
         background-color: white;
         box-shadow: var(--header-element-box-shadow);
         padding: 30px;
@@ -324,9 +329,9 @@ footer {
         right: 0;
         top: 0;
         float: left;
-        margin-left: 65px;
-        margin-bottom: 20px;
-        transform: translate(-130px, -90px) scaleX(2.8) scaleY(2);
+        margin-left: 100px;
+        padding: 10px;
+        transform: translate(-82px, -80px) scaleX(2.2) scaleY(2);
     }
 
     .header-image {
@@ -347,6 +352,7 @@ footer {
         display: inline;
         min-width: auto;
         min-height: auto;
+        padding: 30px;
         background: none;
         box-shadow: none;
     }
@@ -358,6 +364,7 @@ footer {
     .header-main-text {
         text-wrap: wrap;
         font-size: 1rem;
+        padding: 20px;
     }
 
     .main-title {
@@ -376,6 +383,8 @@ footer {
     .footer-image {
         min-width: 300px;
         max-height: 400px;
+        margin: 20px 0;
+        padding: 20px;
     }
 
     .footer-title {
@@ -385,24 +394,29 @@ footer {
     .footer-text-container {
         font-size: 1rem;
         gap: 20px;
+        padding: 30px;
     }
 
     footer {
-        gap: 100px;
+        gap: 20px;
     }
 
     .footer-social-group > button {
         min-width: 50px;
     }
+
+    header, main, footer {
+        padding: 0;
+        max-width: var(--html-section-width-tablet);
+    }
+
+    header {
+        max-width: calc(var(--html-section-width-tablet) - 100px);
+    }
 }
 
 /* mobile breakpoint */
 @media (max-width: 500px) {
-    header,
-    main,
-    footer {
-        max-width: var(--html-section-width-tablet);
-    }
 
     .shape-overflow-container {
         max-width: var(--html-section-width-mobile);
