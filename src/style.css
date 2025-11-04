@@ -303,7 +303,7 @@ footer {
 }
 
 /* tablet breakpoint */
-@media (min-width: 700px) and (max-width: 1100px) {
+@media (min-width: 601px) and (max-width: 1100px) {
     .diagonal-shape {
         transform: rotate(-10deg) translateY(-485px) scaleX(5);
     }
@@ -417,7 +417,7 @@ footer {
 }
 
 /* mobile breakpoint */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
     .shape-overflow-container {
         max-width: var(--html-section-width-mobile);
