@@ -57,17 +57,17 @@ footer {
 
 .diagonal-shape {
     position: absolute;
-    min-width: 150vw;
+    min-width: 100%;
     min-height: 1000px;
     background-color: var(--background-shapes-color);
-    transform: rotate(-10deg) scale(3, 2) translateY(-340px);
+    transform: rotate(-10deg) scale(3, 2) translateY(-340px) translateX(200px);
     z-index: -1;
     box-shadow: var(--header-element-box-shadow);
     
 }
 
 .shape-overflow-container {
-    position: absolute;
+    position: relative;
     min-width: 100%;
     min-height: 100%;
     overflow-x: clip;
