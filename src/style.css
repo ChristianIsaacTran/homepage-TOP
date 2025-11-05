@@ -68,7 +68,7 @@ footer {
 
 .shape-overflow-container {
     position: absolute;
-    min-width: 110%;
+    min-width: 100%;
     min-height: 100%;
     overflow-x: clip;
     z-index: -1;
@@ -310,7 +310,8 @@ footer {
 }
 
 /* tablet breakpoint */
-@media (min-width: 701px) and (max-width: 1650px) {
+@media (min-width: 7clear
+01px) and (max-width: 1650px) {
     .diagonal-shape {
         transform: rotate(-10deg) scale(1.2, 2) translateY(-510px);
     }
