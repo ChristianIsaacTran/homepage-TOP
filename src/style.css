@@ -56,12 +56,21 @@ footer {
 
 .diagonal-shape {
     position: absolute;
-    min-width: 100%;
+    min-width: 150vw;
     min-height: 1000px;
     background-color: var(--background-shapes-color);
-    transform: rotate(-10deg) scale(1.2, 2) translateY(-300px);
+    transform: rotate(-10deg) scale(3, 2) translateY(-340px);
     z-index: -1;
     box-shadow: var(--header-element-box-shadow);
+    
+}
+
+.shape-overflow-container {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    overflow-x: clip;
+    z-index: -1;
 }
 
 body {
@@ -69,11 +78,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.shape-overflow-container {
-    overflow-x: clip;
-    min-width: 100%;
 }
 
 header {
@@ -305,13 +309,7 @@ footer {
 /* tablet breakpoint */
 @media (min-width: 601px) and (max-width: 1100px) {
     .diagonal-shape {
-        transform: rotate(-10deg) translateY(-485px) scaleX(5);
-    }
-
-    .shape-overflow-container {
-        max-width: var(--html-section-width-tablet);
-        max-height: 1000px;
-        position: relative;
+        transform: rotate(-10deg) scale(1.2, 2) translateY(-510px);
     }
 
     header {
@@ -419,14 +417,9 @@ footer {
 /* mobile breakpoint */
 @media (max-width: 600px) {
 
-    .shape-overflow-container {
-        max-width: var(--html-section-width-mobile);
-        max-height: 1000px;
-        position: relative;
-    }
 
     .diagonal-shape {
-        transform: rotate(328deg) translateY(-643px) scaleX(8);
+        transform: rotate(344deg) translateY(-565px) scaleX(8);
     }
 
     header {
