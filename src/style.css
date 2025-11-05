@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --header-element-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.301);
     --background-shapes-color: rgb(4, 91, 112);
@@ -63,7 +62,6 @@ footer {
     transform: rotate(-10deg) scale(3, 2) translateY(-340px) translateX(200px);
     z-index: -1;
     box-shadow: var(--header-element-box-shadow);
-    
 }
 
 .shape-overflow-container {
@@ -85,12 +83,14 @@ body {
 
 header {
     display: flex;
-    align-items: center;
-    margin: 80px 80px 800px 80px;
+    justify-content: center;
+    margin-top: 400px;
+    margin-bottom: 800px;
     position: relative;
-    top: 350px;
-    left: 351px;
-    max-width: 800px;
+    min-width: 900px;
+    background-color: white;
+    box-shadow: var(--header-element-box-shadow);
+    transform: translateX(400px);
 }
 
 .header-title {
@@ -103,7 +103,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    right: 800px;
+    transform: translateX(-850px);
     top: 50%;
     bottom: 50%;
 }
@@ -118,7 +118,8 @@ header {
     color: white;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     min-width: 800px;
     font-size: 3rem;
     top: 300px;
@@ -133,12 +134,11 @@ header {
 .header-text-container {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    justify-content: center;
+    max-width: 800px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     gap: 40px;
-    box-shadow: var(--header-element-box-shadow);
-    /* min-width: 900px; */
-    /* min-height: 500px; */
-    background-color: white;
 }
 
 .header-social-button-group {
@@ -177,6 +177,8 @@ main {
     display: flex;
     flex-direction: column;
     max-width: 530px;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-screenshot-container-red,
@@ -185,7 +187,8 @@ main {
 .card-screenshot-container-pink,
 .card-screenshot-container-orange,
 .card-screenshot-container-blue {
-    padding: 90px 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -224,8 +227,10 @@ main {
 .card-text-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     gap: 20px;
+    max-width: 450px;
 }
 
 .card-text-header {
@@ -257,8 +262,8 @@ footer {
     min-width: 100%;
     margin-top: 150px;
     justify-content: center;
-    gap: 200px;
-    padding: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .phone-group,
@@ -316,36 +321,32 @@ footer {
     }
 
     header {
-        top: 0;
         margin-top: 250px;
         margin-bottom: 200px;
-        background-color: white;
-        box-shadow: var(--header-element-box-shadow);
-        padding: 30px;
         max-height: 800px;
+        min-width: 600px;
         position: static;
+        transform: none;
     }
 
     .header-image-container {
         position: relative;
-        right: 0;
-        top: 0;
         float: left;
-        margin-left: 100px;
-        padding: 10px;
-        transform: translate(-82px, -80px) scaleX(2.2) scaleY(2);
+        transform: translate(-49px, -118px) scaleX(1.2) scaleY(1.9);
+        top: 0;
     }
 
     .header-image {
-        max-height: 200px;
-        max-width: 200px;
+        max-height: 250px;
+        max-width: 400px;
+        min-width: 310px;
     }
 
     .header-image-text {
-        min-width: 400px;
+        min-width: 0;
         font-size: 2rem;
         top: 100px;
-        transform: scale(0.6) translate(180px, -157px);
+        transform: scaleX(1.5) translate(130px, -52px);
         background: none;
         text-shadow: 0px 6px 10px black;
     }
@@ -353,8 +354,8 @@ footer {
     .header-text-container {
         display: inline;
         min-width: auto;
+        max-width: 500px;
         min-height: auto;
-        padding: 30px;
         background: none;
         box-shadow: none;
     }
@@ -366,7 +367,6 @@ footer {
     .header-main-text {
         text-wrap: wrap;
         font-size: 1rem;
-        padding: 20px;
     }
 
     .main-title {
@@ -382,11 +382,13 @@ footer {
         font-size: 2rem;
     }
 
+    .card-text-container {
+        max-width: 280px;
+    }
+
     .footer-image {
-        min-width: 300px;
-        max-height: 400px;
-        margin: 20px 0;
-        padding: 20px;
+        min-width: 0;
+        max-height: 200px;
     }
 
     .footer-title {
@@ -396,19 +398,17 @@ footer {
     .footer-text-container {
         font-size: 1rem;
         gap: 20px;
-        padding: 30px;
-    }
-
-    footer {
-        gap: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .footer-social-group > button {
         min-width: 50px;
     }
 
-    header, main, footer {
-        padding: 0;
+    header,
+    main,
+    footer {
         max-width: var(--html-section-width-tablet);
     }
 
@@ -419,20 +419,20 @@ footer {
 
 /* mobile breakpoint */
 @media (max-width: 700px) {
-
-
     .diagonal-shape {
         transform: rotate(344deg) translateY(-565px) scaleX(8);
     }
 
     header {
         max-width: 400px;
-        top: 0;
-        margin: 0 0 200px 0;
-        padding: 0;
         max-height: none;
+        min-width: 0;
         position: static;
-        margin-top: 20px;
+        margin-top: 600px;
+        margin-bottom: 100px;
+        transform: none;
+        box-shadow: none;
+        background-color: transparent;
     }
 
     .header-title {
@@ -440,30 +440,24 @@ footer {
     }
 
     .header-text-container {
-        background: none;
-        box-shadow: none;
         min-width: 0;
         align-items: center;
     }
 
-    .header-main-text {
-        padding: 0;
-    }
 
     .header-image-container {
-        position: static;
-        right: 0;
+        position: absolute;
         top: 0;
-        float: none;
-        margin-left: 0;
-        margin-bottom: 0;
-        align-items: start;
+        bottom: 0;
+        transform: none;
+        justify-content: start;
+        margin-top: 50px;
     }
 
     .header-image-text {
         min-width: 0;
         max-width: none;
-        font-size: 3.5rem;
+        font-size: 3rem;
         text-align: left;
         top: 340px;
         background: none;
@@ -491,6 +485,10 @@ footer {
         max-width: 377px;
     }
 
+    .card-text-container {
+        max-width: 280px;
+    }
+
     .card-github-button,
     .card-open-button {
         min-width: 40px;
@@ -511,7 +509,8 @@ footer {
         max-width: 377px;
         font-size: 1rem;
         gap: 30px;
-        padding: 20px;
+        justify-content: center;
+        padding-top: 20px;
     }
 
     .footer-title {
@@ -544,7 +543,6 @@ footer {
     header,
     main,
     footer {
-        padding: 0;
         max-width: var(--html-section-width-mobile);
     }
 }
